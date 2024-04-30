@@ -1,5 +1,5 @@
 [flake8]
-ignore = C101,D483,F403,F405,I100,I201,W503,W504,Q000
+ignore = C101,D483,F403,F405,I100,I201,W503,W504,Q000,F401
 exclude =
     .git,
     __pycache__,
@@ -9,7 +9,7 @@ accept-encoding = utf-8
 inline-quotes = single
 max-complexity = 12
 max-linenumber = 500
-max-line-length = 119
+max-line-length = 150
 multiline-quotes = double
 per-file-ignores =
     chaotixcore/project/settings/template/settings.dev.py: F821

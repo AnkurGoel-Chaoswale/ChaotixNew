@@ -26,6 +26,10 @@ migrations:
 run-server:
 	poetry run python -m chaotixcore.manage runserver
 
+.PHONY: make-app
+make-app:
+	poetry run python -m chaotixcore.manage startapp
+
 .PHONY: superuser
 superuser:
 	poetry run python -m chaotixcore.manage createsuperuser

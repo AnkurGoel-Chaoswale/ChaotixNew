@@ -1,6 +1,8 @@
 from pathlib import Path
 from typing import List
 
+import dj_database_url
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -60,10 +62,10 @@ WSGI_APPLICATION = 'chaotixcore.project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default':
+        dj_database_url.parse(
+            "postgres://testing_sbdd_user:ohFyL2vCD0tm0RZZQFr0Uc4hcUfHLKy2@dpg-colvnmq1hbls73981qhg-a.singapore-postgres.render.com/testing_sbdd"
+        )
 }
 
 # Password validation
